@@ -41,28 +41,23 @@ img{
 }
 
 .button{
-  font-size: 35px;
-  padding: 2px 30px;
+  font-family: 微軟正黑體;
+  font-size: 20px;
+  padding: 2px 9px;
   background-color: #C0D89C;
-  transition: all 0.5s;
-  position: relative;
+
 }
-
-
 .outer{
-  border: 4px #3C3C3B solid;
+  border: 2px #3C3C3B solid;
   background-color: #C0D89C;
   padding: 3px;
-  display: block;
-  border-radius: 8px;
-  margin-left:80px;
-  margin-right: 1000px;
-  margin-bottom: 40px;
-  transform: translate(200px, 100px);
+  display: inline-block;
+  border-radius: 5px;
+  margin-left:30px;
+  position: absolute;
+  right: 650px;
+  bottom: 100px;
   cursor: pointer;
-  text-align: center;
-
-
 }
 
 

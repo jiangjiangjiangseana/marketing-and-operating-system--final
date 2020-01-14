@@ -54,33 +54,35 @@ form{
   transform: translate(250px, 0px);
 }
 
-.button{
-  transform: translate(400px);
-}
+
 
 /* input{
   position: absolute;
   margin-left: 50px;
 } */
 
-/* .button{
+ .button{
   font-family: 微軟正黑體;
   font-size: 20px;
   padding: 2px 9px;
   background-color: #C0D89C;
 
-} */
-.outer{
+} 
+.outer.back{
   border: 2px #3C3C3B solid;
   background-color: #C0D89C;
   padding: 3px;
   display: inline-block;
   border-radius: 5px;
   margin-left:30px;
-  position: absolute;
+ /* position: absolute;
   right: 650px;
-  bottom: 100px;
+  bottom: 100px;*/
   cursor: pointer;
+}
+
+.outer.back,.botton{
+  transform: translate(400px,0);
 }
 
 

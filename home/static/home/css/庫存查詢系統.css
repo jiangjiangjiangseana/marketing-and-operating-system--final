@@ -52,6 +52,11 @@ select{
   cursor: pointer;
 }
 
+.outer.back{
+  position:relative;
+  transform: translate(600px,0);
+}
+
 .button{
   font-family: 微軟正黑體;
   font-size: 20px;
