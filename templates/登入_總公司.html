@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/登入_總公司.css' %}">
+    <title>總公司登入</title>
+    <script type="text/javascript">
+      function check(url) {
+
+        if(password.deliverpassword.value=="123"){
+          window.location=url;
+        }
+        else{
+          alert("輸入錯誤");
+        }
+      }
+
+    </script>
+
+  </head>
+
+
+  <body>
+    <div>
+      <h1>總公司登入</h1>
+    </div>
+
+    <div>
+      <h2 class="log-in">請輸入密碼</h2>
+      <form id="password" name="password">
+        <input type="text" name="deliverpassword" width="200px" height="30px">
+      </form>
+    </div>
+
+    <div class="con outer">
+      <button class="button confirm" onclick="check('http://localhost:8000/manage/')">確認</button>
+    </div>
+
+    <div class="outer">
+      <div class="button back">返回前頁</div>
+    </div>
+
+
+  </body>
+</html>

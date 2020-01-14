@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>訂購系統</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'home/css/庫存查詢系統.css' %}"
+    />
+  </head>
+  <body>
+    <h1 class="ch">訂購系統</h1>
+
+    <h2 class="select">廠商001</h2>
+    <div>
+      <table width="800px" border="1">
+        <tr>
+          <th>型號</th>
+          <th>鞋碼</th>
+          <th>訂購數量</th>
+          <th>訂購倉庫</th>
+        </tr>
+        {% for l in storage_list_1 %}
+        <tr>
+          <td>{{l.0}}</td>
+          <td>{{l.1}}</td>
+          <td>{{l.2}}</td>
+          <td>{{l.3}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <br /><br />
+    <h2 class="select">廠商002</h2>
+    <div>
+      <table width="800px" border="1">
+        <tr>
+          <th>型號</th>
+          <th>鞋碼</th>
+          <th>訂購數量</th>
+          <th>訂購倉庫</th>
+        </tr>
+        {% for l in storage_list_2 %}
+        <tr>
+          <td>{{l.0}}</td>
+          <td>{{l.1}}</td>
+          <td>{{l.2}}</td>
+          <td>{{l.3}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <br /><br />
+    <h2 class="select">廠商003</h2>
+    <div>
+      <table width="800px" border="1">
+        <tr>
+          <th>型號</th>
+          <th>鞋碼</th>
+          <th>訂購數量</th>
+          <th>訂購倉庫</th>
+        </tr>
+        {% for l in storage_list_3 %}
+        <tr>
+          <td>{{l.0}}</td>
+          <td>{{l.1}}</td>
+          <td>{{l.2}}</td>
+          <td>{{l.3}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+
+    <br /><br />
+    <h2 class="select">廠商004</h2>
+    <div>
+      <table width="800px" border="1">
+        <tr>
+          <th>型號</th>
+          <th>鞋碼</th>
+          <th>訂購數量</th>
+          <th>訂購倉庫</th>
+        </tr>
+        {% for l in storage_list_4 %}
+        <tr>
+          <td>{{l.0}}</td>
+          <td>{{l.1}}</td>
+          <td>{{l.2}}</td>
+          <td>{{l.3}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="outer one">
+    <a href='http://127.0.0.1:8000/supply/d_done_001/'><div class="button deliver">001</div></a>
+  </div>
+  <div class="outer two">
+    <a href='http://127.0.0.1:8000/supply/d_done_002/'><div class="button deliver">002</div></a>
+  </div>
+  <div class="outer three">
+    <a href='http://127.0.0.1:8000/supply/d_done_003/'><div class="button deliver">003</div></a>
+  </div>
+  <div class="outer four">
+    <a href='http://127.0.0.1:8000/supply/d_done_004/'><div class="button deliver">004</div></a>
+  </div>
+
+    <h2 class= "done">出貨完成</h2>
+
+  <!-- <div class="outer tp">
+    <a href='http://127.0.0.1:8000/delivery/done_n/'><div class="button deliver">北區</div></a>
+  </div>
+  <div class="outer tc">
+    <a href='http://127.0.0.1:8000/delivery/done_m/'><div class="button deliver">中區</div></a>
+  </div>
+  <div class="outer tn">
+    <a href='http://127.0.0.1:8000/delivery/done_s/'><div class="button deliver">南區</div></a>
+  </div> -->
+
+    <!-- <div class="select"> -->
+    <!-- <form>
+      <select name="city" value="company" id="company">
+      {% for l in company_list %}
+       <option value="company1">{{l}}</option>
+       {% endfor %} -->
+    <!-- <option value="NewTaipei">廠商B</option>
+       <option value="Taichung">廠商C</option>
+       <option value="Kaohsiung">廠商D</option> -->
+    <!-- </select>
+    </form> -->
+    <!-- </div> -->
+
+    <!-- {% for r in result %}
+      <tr>
+        <th> {{ result.name }}</th>
+        <th> {{ result.address }}</th>
+        <th> {{ result.time }}</th>
+        <th> {{ result.date }}</th>
+      </tr>
+      {% endfor %} -->
+
+    <!-- <div class="outer">
+    <div class="button back">返回前頁</div>
+  </div> -->
+  </body>
+</html>

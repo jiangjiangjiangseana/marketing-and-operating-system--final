@@ -1,0 +1,83 @@
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>銷售報表</title>
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/銷售報表.css' %}">
+  </head>
+  <body>
+    <div>
+      <h1>銷售報表</h1>
+    </div>
+
+
+  <div class="graph">
+    <div>
+      <h3>市占率: <br><< {{y}} >>  {{y_ms}} %</h3>
+    </div>
+
+    <div>
+      <img src="{% static 'home/img/market_share.png' %}",alt="市占率">
+    </div>
+  </div>
+
+    <div class="graph">
+      <div>
+        <h3>總體品類需求佔有率: <br><< {{y2}} >>  {{y_scr}} %</h3>
+      </div>
+
+      <div>
+        <img src="{% static 'home/img/scr.png' %}",alt="品類需求佔有率">
+      </div>
+    </div>
+
+    <div class="graph">
+      <div>
+        <h3>銷售成長率: <br><< {{y1}} >>  {{y_sg}} %</h3>
+      </div>
+
+      <div>
+        <img src="{% static 'home/img/sales_growth.png' %}",alt="銷售成長率">
+      </div>
+    </div>
+
+    <div class="graph">
+      <div>
+        <h3>今年區域銷售狀況: </h3>
+      </div>
+
+      <div>
+        <img src="{% static 'home/img/store.png' %}">
+      </div>
+    </div>
+
+
+    <div class="graph">
+      <div>
+        <h3>今年商品銷售狀況: </h3>
+      </div>
+
+      <div>
+        <img src="{% static 'home/img/product.png' %}">
+      </div>
+    </div>
+
+
+    <div class="graph">
+      <div>
+        <h3>去年商品銷售狀況: </h3>
+      </div>
+
+      <div>
+        <img src="{% static 'home/img/product_last.png' %}">
+      </div>
+    </div>
+
+    <div class="outer">
+      <a href='http://localhost:8000/manage/'><div class="button back">返回前頁</div></a>
+    </div>
+
+
+
+
+  </body>

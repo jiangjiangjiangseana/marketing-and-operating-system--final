@@ -1,0 +1,124 @@
+{% load static %}
+
+<head>
+  <meta charset="utf-8" />
+  <title>待送訂單</title>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'home/css/待送訂單.css' %}"
+  />
+</head>
+<body>
+  <div>
+    <h1>待送訂單</h1>
+  </div>
+  <h2 class="select">選擇商區</h2>
+
+  <script>
+    function search(value) {
+      if (value.charAt(value.length - 1) == " ") {
+        document.getElementById("");
+      }
+    }
+  </script>
+
+  <input id="myInput" onkeyup="searchTable()" type="text" />
+
+  <script>
+    function searchTable() {
+      var input, filter, found, table, tr, td, i, j;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+          if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            found = true;
+          }
+        }
+        if (found) {
+          tr[i].style.display = "";
+          found = false;
+        } else {
+          if (tr[i].id != "tableHeader") {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- <div class="select">
+    <form>
+      <select name="city">
+        {% for i in warehouse_list %}
+        <option value="warehouse">{{i}}</option>
+        {% endfor %}
+      </select>
+    </form>
+  </div> -->
+  <!-- <div class="select">
+      <form>
+        <select name="warehouse">
+        {% for i in warehouse_list %}
+         <option value="warehouse">A</option>
+         <option value="warehouse">B</option>
+         <option value="warehouse-b">{{i.1}}</option>
+         <option value="warehouse-c">{{i.2}}</option>
+         {% endfor %}
+        </select>
+
+      </form>
+    </div> -->
+
+  <div>
+    <table id="myTable" width="800px" border="1">
+      <tr id="tableHeader">
+        <th>分店</th>
+        <th>型號-鞋碼</th>
+        <th>數量</th>
+      </tr>
+      {% for l in deliver_list %}
+      <tr>
+        <td>{{l.0}}</td>
+        <td>{{l.1}}</td>
+        <td>{{l.2}}</td>
+        <!-- <td>{{l.3}}</td> -->
+      </tr>
+      {% endfor %}
+      <!-- {% for r in result %}
+        <tr>
+          <th> {{ result.name }}</th>
+          <th> {{ result.address }}</th>
+          <th> {{ result.time }}</th>
+          <th> {{ result.date }}</th>
+        </tr>
+        {% endfor %} -->
+    </table>
+  </div>
+
+  <h2 class= "done">出貨完成</h2>
+
+  <div class="outer tp">
+    <a href='http://127.0.0.1:8000/delivery/done_n/'><div class="button deliver">北區</div></a>
+  </div>
+  <div class="outer tc">
+    <a href='http://127.0.0.1:8000/delivery/done_m/'><div class="button deliver">中區</div></a>
+  </div>
+  <div class="outer tn">
+    <a href='http://127.0.0.1:8000/delivery/done_s/'><div class="button deliver">南區</div></a>
+  </div>
+
+  <br /><br />
+  <h2>最佳路線</h2>
+  <h3>台北： {{tp_min}}</h3>
+  <h3>台中： {{tc_min}}</h3>
+  <h3>台南： {{tn_min}}</h3>
+  <!--
+    <div class="outer">
+      <div class="button back">返回前頁</div>
+    </div> -->
+</body>

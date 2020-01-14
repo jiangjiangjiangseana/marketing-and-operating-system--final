@@ -1,0 +1,36 @@
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>新增會員</title>
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/新增會員.css' %}">
+  </head>
+  <body>
+    <div>
+      <h1>新增會員</h1>
+    </div>
+
+    <form action="member/" method="post">
+      <h2>會員編號:</h2><input type="text" name="id"><br>
+      <h2>會員姓名：</h2><input type="text" name="name"><br>
+      <h2>電話：</h2><input type="text" name="telnum"><br>
+      <h2>地址：</h2><input type="text" name="address"><br>
+      <h2>年齡：</h2><input type="text" name="age"><br>
+      <h2>e-mail：</h2><input type="text" name="email"><br>
+      <h2>家庭成員數：</h2><input type="text" name="family_mem"><br>
+      <h2>月收入：</h2><input type="text" name="income"><br>
+      <h2>平均購買數:</h2><input type="text" name="mean_quantity"><br>
+      <h2>註冊日期：</h2><input type="date" name="date"><br>
+      <input type="submit" value="送出" class="button">
+    </form>
+
+
+
+    <!-- </div>
+
+    <div class="outer">
+      <div class="button add">確認</div>
+    </div> -->
+
+
+  </body>

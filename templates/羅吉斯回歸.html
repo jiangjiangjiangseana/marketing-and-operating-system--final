@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>羅吉斯回歸</title>
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/羅吉斯回歸.css' %}">
+  </head>
+  <body>
+    <div>
+      <h1>羅吉斯回歸</h1>
+    </div>
+
+    <form action="result/" method="post">
+
+
+      <h2>年齡：</h2><input type="text" name="age"><br>
+      <h2>家庭成員數：</h2><input type="text" name="family_mem"><br>
+      <h2>月收入：</h2><input type="text" name="income"><br>
+      <h2>平均購買數:</h2><input type="text" name="mean_quantity"><br>
+      <input type="submit" value="送出" class="button">
+    </form>
+
+
+
+
+  </body>
+  </html>

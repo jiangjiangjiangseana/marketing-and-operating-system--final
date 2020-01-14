@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CONVERSE </title>
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/產銷首頁.css' %}">
+  </head>
+
+
+  <body>
+
+
+    <div>
+      <h1>converse</h1>
+      <h1 class="ch">產銷資訊系統</h1>
+    </div>
+
+    <h2 class="who">選擇使用者</h2>
+
+    <img src="{% static 'home/img/deliver.png' %}" alt="送貨人員" title="送貨人員" width="160px" height="160px">
+    <div class="outer">
+      <a href='http://localhost:8000/home/delivery_login/'><div class="button deliver">送貨人員</div></a>
+    </div>
+
+    <img src="{% static 'home/img/warehouse.png' %}" alt="廠商" title="廠商" width="160px" height="160px">
+    <div class="outer">
+      <a href='http://localhost:8000/home/supplier_login/'><div class="button firm">廠商</div></a>
+
+    </div>
+
+    <br>
+    <img src="{% static 'home/img/sales.png' %}" alt="銷售人員" title="銷售人員" width="160px" height="160px">
+    <div class="outer">
+      <a href='http://localhost:8000/home/sales_login/'><div class="button sales">銷售人員</div></a>
+    </div>
+
+    <img id="company-img" src="{% static 'home/img/company.png' %}" alt="總公司" title="總公司" width="200px" height="200px">
+    <div class="outer company">
+      <a href='http://localhost:8000/home/company_login/'><div class="button company">總公司</div></a>
+    </div>
+
+    <div class="outer admin">
+      <a href='http://localhost:8000/admin/'><div class="button admin">進入後台</div></a>
+    </div>
+
+    <!-- <div class="logo"></div> -->
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>銷售人員</title>
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/銷售人員.css' %}">
+  </head>
+  <body>
+    <div>
+      <h1>銷售人員</h1>
+    </div>
+
+    <div class="outer">
+      <a href='/sales/new_member/'><div class="button" id="新增會員">新增會員</div></a>
+    </div>
+    <div class="outer">
+      <a href='/sales/new_sales/'><div class="button" id="加入購買資訊">加入購買資訊</div></a>
+    </div>
+    <div class="outer">
+      <a href='/sales/check_inventory/'><div class="button" id="查看存貨">查看存貨</div></a>
+    </div>
+    <div class="logo"></div>
+
+
+  </body>

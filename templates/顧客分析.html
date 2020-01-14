@@ -1,0 +1,57 @@
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>顧客分析</title>
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/顧客分析.css' %}">
+  </head>
+  <body>
+    <div>
+      <h1>顧客分析</h1>
+    </div>
+
+    <div>
+      <h3>留存率: </h3>
+    </div>
+
+    <div>
+      <table class = "table" width="800px" border="1">
+        <tr id="tableHeader">
+          {% for i in year_list %}
+          <th>{{i}}</th>
+          {% endfor %}
+        </tr>
+
+        <tr>
+          {% for l in rr_list %}
+          <td>{{l}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>存活率: </h3>
+    </div>
+    <div>
+      <table class = "table" width="800px" border="1">
+        <tr id="tableHeader">
+          {% for i in year_list %}
+          <th>{{i}}</th>
+          {% endfor %}
+        </tr>
+
+        <tr>
+          {% for l in sr_list %}
+          <td>{{l}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+    </div>
+
+    <div class="outer">
+      <a href='http://localhost:8000/manage/'><div class="button back">返回前頁</div></a>
+    </div>
+
+
+  </body>

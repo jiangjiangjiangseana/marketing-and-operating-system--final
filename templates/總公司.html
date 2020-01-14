@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>總公司</title>
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/總公司.css' %}">
+  </head>
+  <body>
+    <div>
+      <h1>總公司</h1>
+    </div>
+
+    <div class="outer">
+      <a href='/manage/report/'><div class="button" id="銷售報表">銷售報表</div></a>
+    </div>
+
+    <div class="outer">
+      <a href='/manage/customer_analysis/'><div class="button" id="顧客分析">顧客分析</div></a>
+    </div>
+    <div class="outer">
+      <a href='/manage/customer_cluster/'><div class="button" id="顧客分群">客群分析</div></a>
+    </div>
+    <div class="logo"></div>
+
+
+  </body>
+  </html>

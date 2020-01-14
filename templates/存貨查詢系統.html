@@ -1,0 +1,117 @@
+{% load static %}
+
+<head>
+  <meta charset="utf-8" />
+  <title>存貨查詢系統</title>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'home/css/存貨查詢系統.css' %}"
+  />
+</head>
+<body>
+  <h1 class="ch">存貨查詢系統</h1>
+
+  <h2 class="select">選擇店舖</h2>
+
+  <!-- <form>
+    <select
+      id="district-list"
+      onchange="changeDistrict(this.selectedIndex)"
+    ></select>
+    <select id="store-list"></select>
+  </form> -->
+
+  <script>
+    function search(value) {
+      if (value.charAt(value.length - 1) == " ") {
+        document.getElementById("");
+      }
+    }
+  </script>
+
+  <input id="myInput" onkeyup="searchTable()" type="text" />
+
+  <script>
+    function searchTable() {
+      var input, filter, found, table, tr, td, i, j;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+          if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            found = true;
+          }
+        }
+        if (found) {
+          tr[i].style.display = "";
+          found = false;
+        } else {
+          if (tr[i].id != "tableHeader") {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+  <div>
+    <table id="myTable" width="800px" border="1">
+      <tr id="tableHeader">
+        <th>分店</th>
+        <th>商圈＆型號</th>
+        <th>鞋碼</th>
+        <th>數量</th>
+      </tr>
+      {% for l in inventory_list %}
+      <tr>
+        <td>{{l.0}}</td>
+        <td>{{l.1}}</td>
+        <td>{{l.2}}</td>
+        <td>{{l.3}}</td>
+      </tr>
+      {% endfor %}
+      <!-- {% for r in result %}
+      <tr>
+        <th> {{ result.name }}</th>
+        <th> {{ result.address }}</th>
+        <th> {{ result.time }}</th>
+        <th> {{ result.date }}</th>
+      </tr>
+      {% endfor %} -->
+    </table>
+  </div>
+
+  <!--<script type="text/javascript">
+    var district = ["北區", "中區", "南區"];
+
+    var districtSelect = document.getElementById("district-list");
+    var inner = "";
+    for (var i = 0; i < district.length; i++) {
+      inner = inner + "<option value=i>" + district[i] + "</option>";
+    }
+    districtSelect.innerHTML = inner;
+
+    var store = new Array();
+    store[0] = ["北區A", "北區B", "北區C", "北區D", "北區E"];
+    store[1] = ["中區A", "中區B", "中區C", "中區D", "中區E"];
+    store[2] = ["南區A", "南區B", "南區C"];
+
+    function changeDistrict(index) {
+      var Sinner = "";
+      for (var i = 0; i < store[index].length; i++) {
+        Sinner = Sinner + "<option value=i>" + store[index][i] + "</option>";
+      }
+      var storeSelect = document.getElementById("store-list");
+      storeSelect.innerHTML = Sinner;
+    }
+    changeDistrict(document.getElementById("district-list").selectedIndex);
+  </script>-->
+
+  <!-- <div class="outer">
+    <div class="button back">返回前頁</div>
+  </div> -->
+</body>

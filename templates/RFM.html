@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RFM</title>
+    <link rel=stylesheet type="text/css" href="{% static 'home/css/RFM.css' %}">
+  </head>
+  <body>
+    <h1>RFM</h1>
+    <br><br>
+    <div class="table">
+      <table class = "R" width="800px" border="1">
+        <tr>
+          <td>R1</td>
+          {% for i in R1 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>R2</td>
+          {% for i in R2 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>R3</td>
+          {% for i in R3 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+    </div><br><br>
+
+    <div class="table">
+      <table class = "F" width="800px" border="1">
+        <tr>
+          <td>F1</td>
+          {% for i in F1 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>F2</td>
+          {% for i in F2 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>F3</td>
+          {% for i in F3 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+    </div><br><br>
+
+    <div class = "table">
+      <table class = "R" width="800px" border="1">
+        <tr>
+          <td>M1</td>
+          {% for i in V1 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>M2</td>
+          {% for i in V2 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>M3</td>
+          {% for i in V3 %}
+          <td>{{i.0}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+    </div>
+
+
+
+
+
+  </body>
+  </html>
